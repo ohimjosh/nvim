@@ -21,10 +21,14 @@ set background=dark
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 set number
 set nowrap
-set smartcase
 set hlsearch
 set noerrorbells
 set smartindent
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
 set expandtab
+set hidden
+set incsearch
+set colorcolumn=80
+set signcolumn=yes
