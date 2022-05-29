@@ -7,6 +7,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Pocco81/AutoSave.nvim'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
+Plug 'mattn/emmet-vim'
 
 call plug#end() 
 
@@ -290,5 +291,9 @@ let g:closetag_shortcut = '>'
 let g:closetag_close_shortcut = '<leader>>'
 
 
+"==============================================================================
+"EMMET
+let g:user_emmet_mode='n'
+let g:user_emmet_leader_key=','
 
 
