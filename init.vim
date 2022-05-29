@@ -5,6 +5,8 @@ Plug 'preservim/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Pocco81/AutoSave.nvim'
+Plug 'alvan/vim-closetag'
+Plug 'tpope/vim-surround'
 
 call plug#end() 
 
@@ -18,9 +20,11 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 let g:coc_global_extensions = [
   \ 'coc-tsserver',
   \ 'coc-json',
+  \ 'coc-html',
   \ 'coc-css',
-  \  'coc-eslint',
-  \  'coc-prettier'
+  \ 'coc-eslint',
+  \ 'coc-prettier',
+  \ 'coc-pairs'
   \ ]
 
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
@@ -237,6 +241,53 @@ autosave.setup(
     }
 )
 EOF
+"==============================================================================
+"CLOSETAG
+" filenames like *.xml, *.html, *.xhtml, ...
+" These are the file extensions where this plugin is enabled.
+"
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.jsx,*.js'
+
+" filenames like *.xml, *.xhtml, ...
+" This will make the list of non-closing tags self-closing in the specified 
+" files.
+"
+let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.js'
+
+" filetypes like xml, html, xhtml, ...
+" These are the file types where this plugin is enabled.
+"
+let g:closetag_filetypes = 'html,xhtml,phtml,jsx,js'
+
+" filetypes like xml, xhtml, ...
+" This will make the list of non-closing tags self-closing in the specified 
+" files.
+"
+let g:closetag_xhtml_filetypes = 'xhtml,jsx,js'
+
+" integer value [0|1]
+" This will make the list of non-closing tags case-sensitive (e.g. `<Link>` 
+" will be closed while `<link>` won't.)
+"
+let g:closetag_emptyTags_caseSensitive = 1
+
+" dict
+" Disables auto-close if not in a "valid" region (based on filetype)
+"
+let g:closetag_regions = {
+    \ 'typescript.tsx': 'jsxRegion,tsxRegion',
+    \ 'javascript.jsx': 'jsxRegion',
+    \ 'typescriptreact': 'jsxRegion,tsxRegion',
+    \ 'javascriptreact': 'jsxRegion',
+    \ }
+
+" Shortcut for closing tags, default is '>'
+"
+let g:closetag_shortcut = '>'
+
+" Add > at current position without closing the current tag, default is ''
+"
+let g:closetag_close_shortcut = '<leader>>'
 
 
 

@@ -1,5 +1,13 @@
 {
   "eslint.autoFixOnSave": true,
+  "pairs.enableCharacters": [
+      "(",
+      "[",
+      "{",
+      "'",
+      "\"",
+      "`"
+  ],
   "eslint.filetypes": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
