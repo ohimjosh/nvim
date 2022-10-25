@@ -9,22 +9,14 @@
       "`"
   ],
 
-  "eslint.filetypes": [
-      "javascript",
-      "javascriptreact",
-      "typescript",
-      "typescriptreact",
-      "css",
-      "html"
-  ],
-
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
     "javascriptreact",
     "typescript",
     "typescriptreact",
     "css",
-    "html"
+    "html",
+    "python"
   ],
 
   "tsserver.formatOnType": true,
@@ -35,7 +27,10 @@
 
   "snippets.ultisnips.directories": [
       "UltiSnips"
-  ]
+  ],
+
+  "prettier.useTabs": true
+
 
 
 }
